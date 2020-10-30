@@ -17,7 +17,5 @@ class ViewController: UIViewController {
         print("This is the end of October")
         // Do any additional setup after loading the view.
     }
-
-
 }
 
