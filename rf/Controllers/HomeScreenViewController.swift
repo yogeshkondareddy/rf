@@ -10,6 +10,8 @@ import UIKit
 
 class HomeScreenViewController: UIViewController {
 
+    @IBOutlet weak var PtAButton: UIButton!
+    @IBOutlet weak var SSBButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
