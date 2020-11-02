@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HJ3-bA-Qnx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HJ3-bA-Qnx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,38 +33,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vl-VP-kI0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vl-VP-kI0" userLabel="Canvas">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Ao-AyO">
-                                        <rect key="frame" x="20" y="125" width="102" height="30"/>
-                                        <state key="normal" title="SSB Calculator"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQI-MG-EqO">
-                                        <rect key="frame" x="20" y="50" width="119" height="30"/>
-                                        <state key="normal" title="PointA Calculator"/>
-                                        <connections>
-                                            <segue destination="EJb-W8-Fqw" kind="show" id="rBP-Mo-LPl"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="77m-Oh-hR4">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrP-tq-lcV">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQI-MG-EqO">
+                                                        <rect key="frame" x="147.5" y="22.5" width="119" height="30"/>
+                                                        <state key="normal" title="PointA Calculator"/>
+                                                        <connections>
+                                                            <segue destination="EJb-W8-Fqw" kind="show" id="rBP-Mo-LPl"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="cQI-MG-EqO" firstAttribute="centerY" secondItem="xrP-tq-lcV" secondAttribute="centerY" id="BiW-CU-LYy"/>
+                                                    <constraint firstItem="cQI-MG-EqO" firstAttribute="centerX" secondItem="xrP-tq-lcV" secondAttribute="centerX" id="SqZ-6b-ZhJ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxL-aq-1b3">
+                                                <rect key="frame" x="0.0" y="75" width="414" height="75"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Ao-AyO">
+                                                        <rect key="frame" x="156" y="22.5" width="102" height="30"/>
+                                                        <state key="normal" title="SSB Calculator"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="NZW-Ao-AyO" firstAttribute="centerY" secondItem="TxL-aq-1b3" secondAttribute="centerY" id="80U-2l-ASI"/>
+                                                    <constraint firstItem="NZW-Ao-AyO" firstAttribute="centerX" secondItem="TxL-aq-1b3" secondAttribute="centerX" id="Y5c-Vn-uG3"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="sEO-16-bXf"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="NZW-Ao-AyO" firstAttribute="leading" secondItem="7vl-VP-kI0" secondAttribute="leading" constant="20" id="IbW-F6-wlS"/>
-                                    <constraint firstItem="cQI-MG-EqO" firstAttribute="leading" secondItem="7vl-VP-kI0" secondAttribute="leading" constant="20" symbolic="YES" id="S4S-Ha-M9K"/>
-                                    <constraint firstItem="cQI-MG-EqO" firstAttribute="top" secondItem="7vl-VP-kI0" secondAttribute="top" constant="50" id="c9f-yF-6aV"/>
-                                    <constraint firstItem="NZW-Ao-AyO" firstAttribute="top" secondItem="cQI-MG-EqO" secondAttribute="bottom" constant="45" id="s0w-Om-iZS"/>
+                                    <constraint firstItem="77m-Oh-hR4" firstAttribute="leading" secondItem="7vl-VP-kI0" secondAttribute="leading" id="5FM-wT-gWE"/>
+                                    <constraint firstItem="77m-Oh-hR4" firstAttribute="top" secondItem="7vl-VP-kI0" secondAttribute="top" id="Cjx-Re-3JZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="77m-Oh-hR4" secondAttribute="trailing" id="wUv-SM-71u"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="A3d-v2-5Nr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="A3d-v2-5Nr" firstAttribute="bottom" secondItem="7vl-VP-kI0" secondAttribute="bottom" id="Ad7-SP-h0g"/>
                             <constraint firstItem="A3d-v2-5Nr" firstAttribute="trailing" secondItem="7vl-VP-kI0" secondAttribute="trailing" id="Zgm-Pe-qSS"/>
                             <constraint firstItem="7vl-VP-kI0" firstAttribute="top" secondItem="A3d-v2-5Nr" secondAttribute="top" id="ad8-TN-Kku"/>
                             <constraint firstItem="7vl-VP-kI0" firstAttribute="leading" secondItem="A3d-v2-5Nr" secondAttribute="leading" id="wmh-be-63V"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="A3d-v2-5Nr"/>
                     </view>
                     <navigationItem key="navigationItem" title="5G NR Calculator" id="FPn-B3-7S5"/>
                     <connections>
@@ -135,8 +164,8 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UhO-Ea-YYt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="PointA Calculator" id="gMt-M1-geB">
                         <barButtonItem key="backBarButtonItem" title="Home" id="p3y-Pv-fUo"/>
@@ -157,7 +186,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKo-9T-py8">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yv8-TT-7mN">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yv8-TT-7mN">
                                         <rect key="frame" x="180.5" y="372" width="53" height="30"/>
                                         <state key="normal" title="RF Calc"/>
                                         <connections>
@@ -184,14 +213,14 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vKo-9T-py8" secondAttribute="trailing" id="AQD-yk-r40"/>
                             <constraint firstItem="vKo-9T-py8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UQt-lU-xXi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vKo-9T-py8" secondAttribute="bottom" id="W3I-Jq-1pv"/>
                             <constraint firstItem="vKo-9T-py8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oxE-0O-dSt"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="meJ-0V-z0i"/>
                     <connections>
@@ -221,4 +250,9 @@
             <point key="canvasLocation" x="-183" y="-300"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
