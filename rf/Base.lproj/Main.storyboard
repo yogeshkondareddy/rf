@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="696" y="-952"/>
         </scene>
-        <!--Home Screen View Controller-->
+        <!--5G NR Calculator-->
         <scene sceneID="peQ-St-t7v">
             <objects>
                 <viewController id="72b-nj-8uL" customClass="HomeScreenViewController" customModule="rf" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,21 +34,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vl-VP-kI0">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5G NR Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sy-ZZ-43S">
-                                        <rect key="frame" x="141" y="25" width="132" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Ao-AyO">
-                                        <rect key="frame" x="20" y="171" width="102" height="30"/>
+                                        <rect key="frame" x="20" y="125" width="102" height="30"/>
                                         <state key="normal" title="SSB Calculator"/>
-                                        <connections>
-                                            <segue destination="XyX-NB-fsL" kind="show" id="dCC-CV-jyh"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQI-MG-EqO">
-                                        <rect key="frame" x="20" y="96" width="119" height="30"/>
+                                        <rect key="frame" x="20" y="50" width="119" height="30"/>
                                         <state key="normal" title="PointA Calculator"/>
                                         <connections>
                                             <segue destination="EJb-W8-Fqw" kind="show" id="rBP-Mo-LPl"/>
@@ -57,12 +48,10 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="2sy-ZZ-43S" firstAttribute="centerX" secondItem="7vl-VP-kI0" secondAttribute="centerX" id="03S-xO-OQz"/>
-                                    <constraint firstItem="2sy-ZZ-43S" firstAttribute="top" secondItem="7vl-VP-kI0" secondAttribute="top" constant="25" id="6Ut-OY-ike"/>
                                     <constraint firstItem="NZW-Ao-AyO" firstAttribute="leading" secondItem="7vl-VP-kI0" secondAttribute="leading" constant="20" id="IbW-F6-wlS"/>
                                     <constraint firstItem="cQI-MG-EqO" firstAttribute="leading" secondItem="7vl-VP-kI0" secondAttribute="leading" constant="20" symbolic="YES" id="S4S-Ha-M9K"/>
+                                    <constraint firstItem="cQI-MG-EqO" firstAttribute="top" secondItem="7vl-VP-kI0" secondAttribute="top" constant="50" id="c9f-yF-6aV"/>
                                     <constraint firstItem="NZW-Ao-AyO" firstAttribute="top" secondItem="cQI-MG-EqO" secondAttribute="bottom" constant="45" id="s0w-Om-iZS"/>
-                                    <constraint firstItem="cQI-MG-EqO" firstAttribute="top" secondItem="2sy-ZZ-43S" secondAttribute="bottom" constant="50" id="zyy-AW-6wD"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -75,7 +64,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A3d-v2-5Nr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FPn-B3-7S5"/>
+                    <navigationItem key="navigationItem" title="5G NR Calculator" id="FPn-B3-7S5"/>
                     <connections>
                         <outlet property="PtAButton" destination="cQI-MG-EqO" id="y4x-zB-bCI"/>
                         <outlet property="SSBButton" destination="NZW-Ao-AyO" id="emp-0b-B7W"/>
@@ -84,24 +73,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3m0-LQ-NIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1553.6231884057972" y="-952.23214285714278"/>
-        </scene>
-        <!--SSB Calculator-->
-        <scene sceneID="qq1-wK-7Lf">
-            <objects>
-                <viewController id="XyX-NB-fsL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mj8-J3-WWs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="nB6-a9-6Z2"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="SSB Calculator" id="QPK-oP-9xf">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="f3H-4F-kS9"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6ML-JY-euG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2361" y="-644"/>
         </scene>
         <!--PointA Calculator-->
         <scene sceneID="ahZ-hZ-xyJ">
@@ -173,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPh-rt-xTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2360.8695652173915" y="-1301.1160714285713"/>
+            <point key="canvasLocation" x="2555" y="-1310"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -191,7 +162,6 @@
                                         <state key="normal" title="RF Calc"/>
                                         <connections>
                                             <action selector="whenButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YeA-Gb-Ui4"/>
-                                            <segue destination="TUV-4C-qTz" kind="show" id="7al-ZB-Jod"/>
                                         </connections>
                                     </button>
                                     <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tku-F0-ZOV">
@@ -233,22 +203,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="697" y="-300"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="mW3-oB-BDR">
-            <objects>
-                <viewController id="TUV-4C-qTz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="upH-Wc-51v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="dBb-eA-Exq"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="0vc-wS-NoW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lLr-OB-jHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1554" y="-300"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LrO-C3-VmH">
